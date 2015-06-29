@@ -1,4 +1,4 @@
-import {inject, customElement, noView, bindable} from 'aurelia-framework'
+import {inject, customElement, useView, bindable} from 'aurelia-framework'
 import {GravatarUrlGenerator} from "../generator/gravatar-url-generator"
 
 @customElement('gravatar')
@@ -18,6 +18,6 @@ export class GravatarElement {
   }
 
   bind() {
-    this.generatedUrl = this.urlGenerator.generateUrl(credential, size, defaultImage, rating, isSecure);
+    this.generatedUrl = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
   }
 }

@@ -40,7 +40,7 @@ var GravatarElement = (function () {
   _createDecoratedClass(_GravatarElement, [{
     key: 'bind',
     value: function bind() {
-      this.generatedUrl = this.urlGenerator.generateUrl(credential, size, defaultImage, rating, isSecure);
+      this.generatedUrl = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
     }
   }, {
     key: 'credential',
@@ -77,7 +77,7 @@ var GravatarElement = (function () {
   }], null, _instanceInitializers);
 
   GravatarElement = (0, _aureliaFramework.inject)(_generatorGravatarUrlGenerator.GravatarUrlGenerator)(GravatarElement) || GravatarElement;
-  GravatarElement = useView('./gravatar-element.html')(GravatarElement) || GravatarElement;
+  GravatarElement = (0, _aureliaFramework.useView)('./gravatar-element.html')(GravatarElement) || GravatarElement;
   GravatarElement = (0, _aureliaFramework.customElement)('gravatar')(GravatarElement) || GravatarElement;
   return GravatarElement;
 })();

@@ -1,4 +1,3 @@
-import {TemplateGenerator} from "./generators/template-generator"
 import {GravatarUrlGenerator} from "./generator/gravatar-url-generator"
 
 export function configure(aurelia) {

@@ -1,4 +1,4 @@
-define(["exports", "./generators/template-generator", "./generator/gravatar-url-generator"], function (exports, _generatorsTemplateGenerator, _generatorGravatarUrlGenerator) {
+define(["exports", "./generator/gravatar-url-generator"], function (exports, _generatorGravatarUrlGenerator) {
     "use strict";
 
     Object.defineProperty(exports, "__esModule", {

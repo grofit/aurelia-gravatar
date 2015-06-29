@@ -5,8 +5,6 @@ Object.defineProperty(exports, "__esModule", {
 });
 exports.configure = configure;
 
-var _generatorsTemplateGenerator = require("./generators/template-generator");
-
 var _generatorGravatarUrlGenerator = require("./generator/gravatar-url-generator");
 
 function configure(aurelia) {

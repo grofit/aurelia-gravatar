@@ -1,7 +1,7 @@
 System.register(['aurelia-framework', '../generator/gravatar-url-generator'], function (_export) {
   'use strict';
 
-  var inject, customElement, noView, bindable, GravatarUrlGenerator, GravatarElement;
+  var inject, customElement, useView, bindable, GravatarUrlGenerator, GravatarElement;
 
   var _createDecoratedClass = (function () { function defineProperties(target, descriptors, initializers) { for (var i = 0; i < descriptors.length; i++) { var descriptor = descriptors[i]; var decorators = descriptor.decorators; var key = descriptor.key; delete descriptor.key; delete descriptor.decorators; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ('value' in descriptor || descriptor.initializer) descriptor.writable = true; if (decorators) { for (var f = 0; f < decorators.length; f++) { var decorator = decorators[f]; if (typeof decorator === 'function') { descriptor = decorator(target, key, descriptor) || descriptor; } else { throw new TypeError('The decorator for method ' + descriptor.key + ' is of the invalid type ' + typeof decorator); } } if (descriptor.initializer !== undefined) { initializers[key] = descriptor; continue; } } Object.defineProperty(target, key, descriptor); } } return function (Constructor, protoProps, staticProps, protoInitializers, staticInitializers) { if (protoProps) defineProperties(Constructor.prototype, protoProps, protoInitializers); if (staticProps) defineProperties(Constructor, staticProps, staticInitializers); return Constructor; }; })();
 
@@ -13,7 +13,7 @@ System.register(['aurelia-framework', '../generator/gravatar-url-generator'], fu
     setters: [function (_aureliaFramework) {
       inject = _aureliaFramework.inject;
       customElement = _aureliaFramework.customElement;
-      noView = _aureliaFramework.noView;
+      useView = _aureliaFramework.useView;
       bindable = _aureliaFramework.bindable;
     }, function (_generatorGravatarUrlGenerator) {
       GravatarUrlGenerator = _generatorGravatarUrlGenerator.GravatarUrlGenerator;
@@ -45,7 +45,7 @@ System.register(['aurelia-framework', '../generator/gravatar-url-generator'], fu
         _createDecoratedClass(_GravatarElement, [{
           key: 'bind',
           value: function bind() {
-            this.generatedUrl = this.urlGenerator.generateUrl(credential, size, defaultImage, rating, isSecure);
+            this.generatedUrl = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
           }
         }, {
           key: 'credential',

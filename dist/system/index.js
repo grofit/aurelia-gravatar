@@ -1,7 +1,7 @@
-System.register(["./generators/template-generator", "./generator/gravatar-url-generator"], function (_export) {
+System.register(["./generator/gravatar-url-generator"], function (_export) {
     "use strict";
 
-    var TemplateGenerator, GravatarUrlGenerator;
+    var GravatarUrlGenerator;
 
     _export("configure", configure);
 
@@ -11,9 +11,7 @@ System.register(["./generators/template-generator", "./generator/gravatar-url-ge
     }
 
     return {
-        setters: [function (_generatorsTemplateGenerator) {
-            TemplateGenerator = _generatorsTemplateGenerator.TemplateGenerator;
-        }, function (_generatorGravatarUrlGenerator) {
+        setters: [function (_generatorGravatarUrlGenerator) {
             GravatarUrlGenerator = _generatorGravatarUrlGenerator.GravatarUrlGenerator;
         }],
         execute: function () {}

@@ -1,5 +1,5 @@
 import {TypeHelper} from "../helpers/type-helper"
-import {md5} from "md5"
+import md5 from "md5"
 
 export class GravatarUrlGenerator
 {

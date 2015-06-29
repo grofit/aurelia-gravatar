@@ -11,7 +11,7 @@ System.register(["../helpers/type-helper", "md5"], function (_export) {
                 setters: [function (_helpersTypeHelper) {
                         TypeHelper = _helpersTypeHelper.TypeHelper;
                 }, function (_md5) {
-                        md5 = _md5.md5;
+                        md5 = _md5["default"];
                 }],
                 execute: function () {
                         GravatarUrlGenerator = (function () {
