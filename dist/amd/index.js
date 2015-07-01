@@ -9,5 +9,6 @@ define(["exports", "./generator/gravatar-url-generator"], function (exports, _ge
     function configure(aurelia) {
         aurelia.container.registerInstance(_generatorGravatarUrlGenerator.GravatarUrlGenerator, new _generatorGravatarUrlGenerator.GravatarUrlGenerator());
         aurelia.globalizeResources("./elements/gravatar-element");
+        aurelia.globalizeResources("./attributes/gravatar-attribute");
     }
 });
