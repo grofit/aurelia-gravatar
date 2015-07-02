@@ -10,7 +10,7 @@ Install using JSPM:
 
 then include into aurelia plugins
 
-`aurelia.use.plugin("aurelia-gravatar");`
+`aurelia.use.plugin("grofit/aurelia-gravatar");`
 
 then you are all set.
 
