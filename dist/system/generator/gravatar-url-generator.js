@@ -21,7 +21,7 @@ System.register(["../helpers/type-helper", "md5"], function (_export) {
 
                 _createClass(GravatarUrlGenerator, [{
                     key: "generateUrl",
-                    value: function generateUrl(credential, size, rating, defaultImage, isSecure) {
+                    value: function generateUrl(credential, size, defaultImage, rating, isSecure) {
                         var hashedCredential = TypeHelper.isEmail(credential) ? md5(credential) : credential;
 
                         var url = isSecure ? "https://secure.gravatar.com/avatar/" : "http://www.gravatar.com/avatar/";

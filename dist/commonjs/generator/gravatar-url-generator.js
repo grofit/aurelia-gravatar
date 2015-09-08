@@ -23,7 +23,7 @@ var GravatarUrlGenerator = (function () {
 
     _createClass(GravatarUrlGenerator, [{
         key: "generateUrl",
-        value: function generateUrl(credential, size, rating, defaultImage, isSecure) {
+        value: function generateUrl(credential, size, defaultImage, rating, isSecure) {
             var hashedCredential = _helpersTypeHelper.TypeHelper.isEmail(credential) ? (0, _md52["default"])(credential) : credential;
 
             var url = isSecure ? "https://secure.gravatar.com/avatar/" : "http://www.gravatar.com/avatar/";

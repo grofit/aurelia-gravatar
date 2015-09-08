@@ -3,7 +3,7 @@ import md5 from "md5"
 
 export class GravatarUrlGenerator
 {
-    generateUrl(credential, size, rating, defaultImage, isSecure) {
+    generateUrl(credential, size, defaultImage, rating, isSecure) {
         var hashedCredential = TypeHelper.isEmail(credential) ? md5(credential) : credential;
 
         var url = isSecure ? "https://secure.gravatar.com/avatar/" : "http://www.gravatar.com/avatar/";
