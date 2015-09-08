@@ -7,7 +7,7 @@ export class GravatarUrlGenerator
         var hashedCredential = TypeHelper.isEmail(credential) ? md5(credential) : credential;
 
         var url = isSecure ? "https://secure.gravatar.com/avatar/" : "http://www.gravatar.com/avatar/";
-        url += hashedCredential + ".jpg?";
+        url += hashedCredential + "?";
 
         if(size)
         { url += "s=" + size + "&"; }
