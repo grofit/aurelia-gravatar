@@ -50,7 +50,7 @@
     },
     "dependencies": {
       "aurelia-framework": "npm:aurelia-framework@^1.0.0-beta.1.0.2",
-      "blueimp/JavaScript-MD5": "github:blueimp/JavaScript-MD5@^1.1.1"
+      "md5": "github:blueimp/JavaScript-MD5@1.1.1"
     },
     "devDependencies": {
       "traceur": "github:jmcriffey/bower-traceur@0.0.91",

@@ -7,8 +7,8 @@ System.config({
   },
 
   map: {
-    "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.0.2",
-    "blueimp/JavaScript-MD5": "github:blueimp/JavaScript-MD5@1.1.1",
+    "aurelia-framework": "npm:aurelia-framework@1.0.0-beta.1.0.3",
+    "md5": "github:blueimp/JavaScript-MD5@1.1.1",
     "traceur": "github:jmcriffey/bower-traceur@0.0.91",
     "traceur-runtime": "github:jmcriffey/bower-traceur-runtime@0.0.91",
     "github:jspm/nodelibs-assert@0.1.0": {
@@ -26,7 +26,7 @@ System.config({
     "npm:assert@1.3.0": {
       "util": "npm:util@0.10.3"
     },
-    "npm:aurelia-binding@1.0.0-beta.1.0.1": {
+    "npm:aurelia-binding@1.0.0-beta.1.0.2": {
       "aurelia-metadata": "npm:aurelia-metadata@1.0.0-beta.1",
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1",
@@ -38,8 +38,8 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1",
       "core-js": "npm:core-js@1.2.6"
     },
-    "npm:aurelia-framework@1.0.0-beta.1.0.2": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.1",
+    "npm:aurelia-framework@1.0.0-beta.1.0.3": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.2",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.1",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
@@ -47,7 +47,7 @@ System.config({
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1",
       "aurelia-path": "npm:aurelia-path@1.0.0-beta.1",
       "aurelia-task-queue": "npm:aurelia-task-queue@1.0.0-beta.1",
-      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1",
+      "aurelia-templating": "npm:aurelia-templating@1.0.0-beta.1.0.1",
       "core-js": "npm:core-js@1.2.6"
     },
     "npm:aurelia-loader@1.0.0-beta.1": {
@@ -61,8 +61,8 @@ System.config({
     "npm:aurelia-task-queue@1.0.0-beta.1": {
       "aurelia-pal": "npm:aurelia-pal@1.0.0-beta.1"
     },
-    "npm:aurelia-templating@1.0.0-beta.1": {
-      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.1",
+    "npm:aurelia-templating@1.0.0-beta.1.0.1": {
+      "aurelia-binding": "npm:aurelia-binding@1.0.0-beta.1.0.2",
       "aurelia-dependency-injection": "npm:aurelia-dependency-injection@1.0.0-beta.1",
       "aurelia-loader": "npm:aurelia-loader@1.0.0-beta.1",
       "aurelia-logging": "npm:aurelia-logging@1.0.0-beta.1",
