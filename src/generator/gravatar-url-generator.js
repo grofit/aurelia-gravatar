@@ -4,7 +4,6 @@ import md5 from "md5"
 export class GravatarUrlGenerator
 {
     generateUrl(credential, size, rating, defaultImage, isSecure) {
-        console.log("args", arguments);
         var hashedCredential = TypeHelper.isEmail(credential) ? md5(credential) : credential;
 
         var url = isSecure ? "https://secure.gravatar.com/avatar/" : "http://www.gravatar.com/avatar/";
