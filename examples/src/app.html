@@ -1,0 +1,36 @@
+<template>
+    <div>
+        <h2>Hash Generator</h2>
+        <label for="hash-generator">Dont want to expose the email address, no worries use an md5 hash of it</label>
+        <input type="text" id="hash-generator" value.bind="wannabeHash"/>
+        <input type="text" id="hash-output" value.bind="generatedHash"/>
+        <label for="hash-output">Go try the hash below, it works just as well as the plaintext email</label>
+    </div>
+
+    <div>
+        <h2>Default Gravatar Image</h2>
+        <label for="credential">Enter Email or Email Hash</label>
+        <input type="text" id="credential" value.bind="currentCredential" />
+        <gravatar id="some-gravatar-element" credential.bind="currentCredential"></gravatar>
+    </div>
+
+    <div>
+        <h2>Sized Gravatar Image</h2>
+        <label for="size">Enter Size Required (in numeric format)</label>
+        <input type="text" id="size" value.bind="size" />
+        <gravatar id="sized-gravatar-element" credential.bind="currentCredential" size.bind="size"></gravatar>
+    </div>
+
+    <div>
+        <h2>Defaulted Gravatar Image</h2>
+        <label for="size">Enter Default Image Type (i.e wavatar, identicon)</label>
+        <input type="text" id="default-image" value.bind="defaultImage" />
+        <gravatar id="defaulted-gravatar-image" credential.bind="currentCredential" size.bind="size" default-image.bind="defaultImage"></gravatar>
+    </div>
+
+    <div>
+        <h2>Secured Gravatar Image</h2>
+        <gravatar id="defaulted-gravatar-image" credential.bind="currentCredential" size.bind="size" default-image.bind="defaultImage" is-secture="true"></gravatar>
+    </div>
+
+</template>

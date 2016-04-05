@@ -7,7 +7,7 @@ System.register(['aurelia-framework', '../generator/gravatar-url-generator'], fu
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-  function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer.call(target); Object.defineProperty(target, key, descriptor); }
+  function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer ? descriptor.initializer.call(target) : undefined; Object.defineProperty(target, key, descriptor); }
 
   return {
     setters: [function (_aureliaFramework) {
@@ -21,32 +21,9 @@ System.register(['aurelia-framework', '../generator/gravatar-url-generator'], fu
     execute: function () {
       GravatarAttribute = (function () {
         var _instanceInitializers = {};
+        var _instanceInitializers = {};
 
-        function GravatarAttribute(element, urlGenerator) {
-          _classCallCheck(this, _GravatarAttribute);
-
-          _defineDecoratedPropertyDescriptor(this, 'credential', _instanceInitializers);
-
-          _defineDecoratedPropertyDescriptor(this, 'size', _instanceInitializers);
-
-          _defineDecoratedPropertyDescriptor(this, 'defaultImage', _instanceInitializers);
-
-          _defineDecoratedPropertyDescriptor(this, 'rating', _instanceInitializers);
-
-          _defineDecoratedPropertyDescriptor(this, 'isSecure', _instanceInitializers);
-
-          this.element = element;
-          this.urlGenerator = urlGenerator;
-        }
-
-        var _GravatarAttribute = GravatarAttribute;
-
-        _createDecoratedClass(_GravatarAttribute, [{
-          key: 'bind',
-          value: function bind() {
-            this.element.src = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
-          }
-        }, {
+        _createDecoratedClass(GravatarAttribute, [{
           key: 'credential',
           decorators: [bindable],
           initializer: null,
@@ -73,6 +50,41 @@ System.register(['aurelia-framework', '../generator/gravatar-url-generator'], fu
           enumerable: true
         }], null, _instanceInitializers);
 
+        function GravatarAttribute(element, urlGenerator) {
+          _classCallCheck(this, _GravatarAttribute);
+
+          _defineDecoratedPropertyDescriptor(this, 'credential', _instanceInitializers);
+
+          _defineDecoratedPropertyDescriptor(this, 'size', _instanceInitializers);
+
+          _defineDecoratedPropertyDescriptor(this, 'defaultImage', _instanceInitializers);
+
+          _defineDecoratedPropertyDescriptor(this, 'rating', _instanceInitializers);
+
+          _defineDecoratedPropertyDescriptor(this, 'isSecure', _instanceInitializers);
+
+          this.element = element;
+          this.urlGenerator = urlGenerator;
+        }
+
+        _createDecoratedClass(GravatarAttribute, [{
+          key: 'attached',
+          value: function attached() {
+            this.refreshBindings();
+          }
+        }, {
+          key: 'propertyChanged',
+          value: function propertyChanged() {
+            this.refreshBindings();
+          }
+        }, {
+          key: 'refreshBindings',
+          value: function refreshBindings() {
+            this.element.src = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
+          }
+        }], null, _instanceInitializers);
+
+        var _GravatarAttribute = GravatarAttribute;
         GravatarAttribute = inject(Element, GravatarUrlGenerator)(GravatarAttribute) || GravatarAttribute;
         GravatarAttribute = customAttribute('gravatar')(GravatarAttribute) || GravatarAttribute;
         return GravatarAttribute;

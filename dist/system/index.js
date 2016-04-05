@@ -7,8 +7,8 @@ System.register(["./generator/gravatar-url-generator"], function (_export) {
 
     function configure(aurelia) {
         aurelia.container.registerInstance(GravatarUrlGenerator, new GravatarUrlGenerator());
-        aurelia.globalizeResources("./elements/gravatar-element");
-        aurelia.globalizeResources("./attributes/gravatar-attribute");
+        aurelia.globalResources("./elements/gravatar-element");
+        aurelia.globalResources("./attributes/gravatar-attribute");
     }
 
     return {

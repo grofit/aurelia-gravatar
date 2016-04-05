@@ -9,37 +9,13 @@ define(['exports', 'aurelia-framework', '../generator/gravatar-url-generator'], 
 
   function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError('Cannot call a class as a function'); } }
 
-  function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer.call(target); Object.defineProperty(target, key, descriptor); }
+  function _defineDecoratedPropertyDescriptor(target, key, descriptors) { var _descriptor = descriptors[key]; if (!_descriptor) return; var descriptor = {}; for (var _key in _descriptor) descriptor[_key] = _descriptor[_key]; descriptor.value = descriptor.initializer ? descriptor.initializer.call(target) : undefined; Object.defineProperty(target, key, descriptor); }
 
   var GravatarElement = (function () {
     var _instanceInitializers = {};
+    var _instanceInitializers = {};
 
-    function GravatarElement(urlGenerator) {
-      _classCallCheck(this, _GravatarElement);
-
-      _defineDecoratedPropertyDescriptor(this, 'credential', _instanceInitializers);
-
-      _defineDecoratedPropertyDescriptor(this, 'size', _instanceInitializers);
-
-      _defineDecoratedPropertyDescriptor(this, 'defaultImage', _instanceInitializers);
-
-      _defineDecoratedPropertyDescriptor(this, 'rating', _instanceInitializers);
-
-      _defineDecoratedPropertyDescriptor(this, 'isSecure', _instanceInitializers);
-
-      _defineDecoratedPropertyDescriptor(this, 'generatedUrl', _instanceInitializers);
-
-      this.urlGenerator = urlGenerator;
-    }
-
-    var _GravatarElement = GravatarElement;
-
-    _createDecoratedClass(_GravatarElement, [{
-      key: 'bind',
-      value: function bind() {
-        this.generatedUrl = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
-      }
-    }, {
+    _createDecoratedClass(GravatarElement, [{
       key: 'credential',
       decorators: [_aureliaFramework.bindable],
       initializer: null,
@@ -68,13 +44,49 @@ define(['exports', 'aurelia-framework', '../generator/gravatar-url-generator'], 
       key: 'generatedUrl',
       decorators: [_aureliaFramework.bindable],
       initializer: function initializer() {
-        return '';
+        return "";
       },
       enumerable: true
     }], null, _instanceInitializers);
 
+    function GravatarElement(urlGenerator) {
+      _classCallCheck(this, _GravatarElement);
+
+      _defineDecoratedPropertyDescriptor(this, 'credential', _instanceInitializers);
+
+      _defineDecoratedPropertyDescriptor(this, 'size', _instanceInitializers);
+
+      _defineDecoratedPropertyDescriptor(this, 'defaultImage', _instanceInitializers);
+
+      _defineDecoratedPropertyDescriptor(this, 'rating', _instanceInitializers);
+
+      _defineDecoratedPropertyDescriptor(this, 'isSecure', _instanceInitializers);
+
+      _defineDecoratedPropertyDescriptor(this, 'generatedUrl', _instanceInitializers);
+
+      this.urlGenerator = urlGenerator;
+    }
+
+    _createDecoratedClass(GravatarElement, [{
+      key: 'attached',
+      value: function attached() {
+        this.refreshBindings();
+      }
+    }, {
+      key: 'propertyChanged',
+      value: function propertyChanged() {
+        this.refreshBindings();
+      }
+    }, {
+      key: 'refreshBindings',
+      value: function refreshBindings() {
+        this.generatedUrl = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
+      }
+    }], null, _instanceInitializers);
+
+    var _GravatarElement = GravatarElement;
     GravatarElement = (0, _aureliaFramework.inject)(_generatorGravatarUrlGenerator.GravatarUrlGenerator)(GravatarElement) || GravatarElement;
-    GravatarElement = (0, _aureliaFramework.useView)('./gravatar-element.html')(GravatarElement) || GravatarElement;
+    GravatarElement = (0, _aureliaFramework.useView)("./gravatar-element.html")(GravatarElement) || GravatarElement;
     GravatarElement = (0, _aureliaFramework.customElement)('gravatar')(GravatarElement) || GravatarElement;
     return GravatarElement;
   })();

@@ -17,7 +17,15 @@ export class GravatarElement {
     this.urlGenerator = urlGenerator;
   }
 
-  bind() {
+  attached() {
+    this.refreshBindings();
+  }
+
+  propertyChanged() {
+    this.refreshBindings();
+  }
+
+  refreshBindings() {
     this.generatedUrl = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
   }
 }
