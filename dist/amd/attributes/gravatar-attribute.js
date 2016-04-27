@@ -72,7 +72,7 @@ define(['exports', 'aurelia-framework', '../generator/gravatar-url-generator'], 
     }, {
       key: 'refreshBindings',
       value: function refreshBindings() {
-        this.element.src = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
+        this.element.src = this.urlGenerator.generateUrl(this.credential, this.size, this.rating, this.defaultImage, this.isSecure);
       }
     }], null, _instanceInitializers);
 

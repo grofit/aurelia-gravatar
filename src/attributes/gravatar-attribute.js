@@ -24,6 +24,6 @@ export class GravatarAttribute {
   }
 
   refreshBindings() {
-    this.element.src = this.urlGenerator.generateUrl(this.credential, this.size, this.defaultImage, this.rating, this.isSecure);
+    this.element.src = this.urlGenerator.generateUrl(this.credential, this.size, this.rating, this.defaultImage, this.isSecure);
   }
 }

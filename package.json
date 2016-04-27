@@ -1,6 +1,6 @@
 {
   "name": "aurelia-gravatar",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "registry": "jspm",
   "description": "A simple custom element to handle gravatar based profile pictures",
   "keywords": [
